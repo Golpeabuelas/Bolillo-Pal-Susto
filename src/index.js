@@ -30,15 +30,6 @@ app.get('/', (req, res) => {
     res.sendFile(join(__dirname, 'public', 'html', 'index.html'));
 });
 
-app.set('views', join(__dirname, 'views'));  
-app.engine('.hbs', engine({
-    defaultLayout: 'main',
-    layoutsDir: join(app.get('views'), 'layouts'),
-    partialsDir: join(app.get('views'), 'partials'),
-    extname: '.hbs'
-}))
-app.set('view engine', 'hbs');  
-
 app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
