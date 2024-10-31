@@ -1,0 +1,147 @@
+/*------------------------Header------------------------------*/
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    font-family: 'Pacifico', cursive;
+    font-weight: 100;
+    font-size: 2rem;
+}
+
+.logo {
+    text-decoration: none;
+    color: #444;
+}
+
+.enlace {
+    font-family: 'Montserrat', sans-serif;
+    color: #444;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.enlaces-navegacion {
+    display: flex;
+    margin-right: 30px;
+    align-items: center;
+}
+
+.item-navegacion {
+    margin-left: 1.5rem;
+}
+
+.icono-header {
+    width: 25px;
+}
+
+.icono-header:hover{
+    width: 25px;
+    border-bottom: 1px solid #444;
+}
+
+.item-navegacion:hover{
+    font-weight: bold;
+    color: #000;
+}
+
+/*------------------------Footer------------------------------*/
+footer {
+    background-color: #f0f0f0;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    justify-content: space-between;
+}
+
+.decoracion-footer {
+    max-width: 650px;
+    min-width: 400px;
+    margin-bottom: 1rem;
+    margin-left: 3rem;
+    flex: 0 1 auto;
+}
+
+.imagen-decorativa {
+    width: 100%;
+}
+
+.texto-footer {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    margin-top: 1rem;
+}
+
+.enlaces-footer {
+    flex: 0 1 15%;
+    min-width: 150px;
+    max-width: 160px;
+    margin-bottom: 1rem;
+    margin-inline: 1rem;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.enlace-footer {
+    font-family: 'Montserrat', sans-serif;
+    color: #444;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 1rem;
+    display: block;
+    margin-top: 1rem;
+}
+
+.redes-sociales {
+    display: flex;
+    flex: 0 1 15%;
+    flex-direction: column;
+    align-items: center;
+    max-width: 160px;
+}
+
+.iconos-redes {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.img-footer {
+    width: 25px;
+    margin: 0 0.5rem;
+}
+
+.enlace-footer:hover {
+    color: #c1c1c1;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .decoracion-footer {
+        flex: 1 1 30%;
+    }
+
+    .enlaces-footer {
+        flex: 1 1 20%;
+        margin-left: 10px; 
+    }
+
+    .redes-sociales {
+        flex: 1 1 20%;
+    }
+}

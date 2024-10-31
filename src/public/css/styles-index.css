@@ -3,145 +3,43 @@ html, body {
     margin: 0;
     display: flex;
     flex-direction: column;
+    font-size: 16px;
+    box-sizing: border-box;
 }
 
-body{
-    box-sizing: border-box;
+body {
     background-color: #fdfdfd;
-    margin: 0%;
 }
 
-/*------------------------COSAS DEL HEADER-----------------------------*/
-
-header{
-    background-color: #fefefe;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-inline: 2%;
-    box-sizing: border-box;
-    border-bottom-color: #AAA;
-    border-bottom-style: solid;
-    border-width: 1px;
-}
-
-h1{
-    font-family: 'Pacifico', cursive;
-    font-weight: 100;
-    font-size: 2em;
-}
-
-.links{
-    box-sizing: border-box;
-    display: flex;
-    margin-right: 15%;
-    font-size: 1em;
-}
-
-.link{
-    font-family: 'Montserrat', sans-serif;
-    color: #444;
-    text-decoration: none;
-}
-
-.links-header{
-    margin-inline: 10%;
-}
-/*------------------------COSAS DEL CONTENIDO-----------------------------*/
-
-.contenedor {
+.contenedor-productos {
     display: flex;
     flex-wrap: wrap;
-    flex: 1;
-    padding: 5% 5%;
     justify-content: center;
-}
-
-
-.mostrar-producto{
-    width: 20dvw;
-    min-width: 204px;
+    padding: 2rem 0;
     text-align: center;
-    padding: 0 1%;
-    margin-bottom: 5dvh;
 }
 
-img{
+.producto {
+    width: 20vw;
+    min-width: 204px;
+    margin: 1.5rem;
+}
+
+.img-producto {
     width: 100%;
 }
 
-.datos-pan{
+.datos-producto {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    padding: 0 1dvw;
+    margin-top: 0.5rem;
 }
 
-h2{
+.datos-producto h2, .datos-producto p {
     font-family: 'Montserrat', sans-serif;
     color: #666;
     font-weight: 300;
-    font-size: 1.3em;
+    font-size: 1.3rem;
 }
-
-p{
-    font-family: 'Montserrat', sans-serif;
-    color: #666;
-    font-size: 1.3em;
-}
-
-/*------------------------COSAS DEL FOOTER-----------------------------*/
-
-footer{
-    background-color: #f0f0f0;
-    border-color: #fafafa;
-    display: flex;
-    flex-direction: row;
-    padding: 5%;
-}
-
-.decoracion{
-    box-sizing: border-box;
-    margin-right: 10%;
-    padding-top: 1%;
-}
-
-.elementos-footer {
-    box-sizing: border-box;
-    width: 15%;
-    margin-right: 5%;
-}
-
-.enlaces-footer{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.miembros{
-    margin-top: 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.txt-footer{
-    font-weight: 400;
-    font-style: italic;
-}
-
-h3{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    font-size: 1em;
-    color: #555;
-}
-
-.links-footer{
-    margin-top: 5%;
-}
-
 
 
