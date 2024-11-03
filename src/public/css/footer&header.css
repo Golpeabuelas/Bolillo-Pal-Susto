@@ -1,17 +1,19 @@
 /*------------------------Header------------------------------*/
 
-header {
+.header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
     border-bottom: 1px solid #ddd;
+    height: 7vh;
 }
 
-header h1 {
+.header .h1 {
     font-family: 'Pacifico', cursive;
     font-weight: 100;
     font-size: 2rem;
+    margin-block: 2rem;
 }
 
 .logo {
@@ -51,7 +53,7 @@ header h1 {
 }
 
 /*------------------------Footer------------------------------*/
-footer {
+.footer {
     background-color: #f0f0f0;
     padding: 2rem;
     display: flex;
@@ -88,7 +90,7 @@ footer {
     margin-inline: 1rem;
 }
 
-h3 {
+.h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 1rem;

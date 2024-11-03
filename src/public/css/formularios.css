@@ -1,3 +1,16 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fdfdfd;
+}
+
 .contenedor{
     width: 19%;
     min-width: 300px;
@@ -5,8 +18,8 @@
     border: 2px solid #a1a1a1;
     border-radius: 10px;
     margin-inline: auto;
-    margin-top: 10rem;
-    margin-bottom: 15rem;
+    margin-top: 3rem;
+    margin-bottom: 7rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -59,6 +72,13 @@ input{
     box-sizing: border-box;
     border: 1px solid #c1c1c1;
     border-radius: 0%;
+    padding-left: 10px;
+    color: #555;
+}
+
+input:focus{
+    box-shadow: 0 0 5px #0000ff80;
+    outline: none;
 }
 
 .boton{
@@ -67,6 +87,14 @@ input{
     letter-spacing: 3px;
     font-weight: bold;
     font-size: 14px;
+    transition: .5s;
+}
+
+.boton:hover{
+    background-color: transparent;
+    color: #444;
+    transition: .7s;
+    border-color: #000;
 }
 
 .enlace-recuperar{
@@ -78,7 +106,7 @@ input{
     margin-block: 1.5rem;
 }
 
-.sign-in{
+.enlace-navegacion{
     margin-top: 8rem;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
@@ -92,4 +120,5 @@ span{
 span:hover{
     font-weight: bold;
     text-decoration: underline;
+    color: #b1b1b1;
 }
