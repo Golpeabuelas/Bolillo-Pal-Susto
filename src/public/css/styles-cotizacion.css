@@ -11,14 +11,30 @@ body {
     background-color: #fdfdfd;
 }
 
-.contenedor {
+.elegir{
+    background-color: #fdfdfd;
+    color: #555;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    font-size: 14px;
+    width: 100%;
+    border: 2px solid #222;
+    padding: .5rem;
+    transition: .5s;
+}
+
+.elegir:hover{
+    background-color: #000;
+    color: #fdfdfd;
+}
+
+.contenedor{
     width: 90%;
     align-self: center;
     margin-inline: auto;
     margin-top: 3rem;
     margin-bottom: 7rem;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-inline: 1.5rem;
@@ -37,24 +53,159 @@ body {
     margin-bottom: 3rem;
 }
 
-h2{
+h2 {
     color: #000;
     font-weight: 300;
     letter-spacing: 3px;
     margin-bottom: 1rem;
     font-size: 18px;
+    text-align: center;
 }
 
-.descripcion{
-    color: #555;
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 2px;
-    font-size: 14px;
+.contenedor-tipos-pastel {
     width: 100%;
-    border: 2px solid #222;
-    padding: .5rem;
+    padding-inline: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
-   
+.tipo-pastel {
+    width: 20%;
+    max-width: 230px;
+    min-width: 230px;
+    min-height: 380px;
+    margin: 1.6rem;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 20px #bbb;
+    border-radius: 15px;
+    background-color: transparent;
+    transition: .5s;
+}
 
+.contenedor-tipos-pastel:hover .tipo-pastel:hover {
+    transform: scale(1.1);
+    filter: blur(0);
+}
+
+.contenedor-tipos-pastel:hover .tipo-pastel {
+    filter: blur(0.7px);
+    transform: scale(0.9);
+}
+
+#regresar{
+    margin-top: 4rem;
+    max-width: min-content;
+    margin-inline: 10px;
+}
+
+#regresar:hover{
+    font-weight: bold;
+}
+
+#regresar-tipos{
+    margin-top: 4rem;
+    max-width: min-content;
+    margin-inline: 10px;
+}
+
+#regresar-tipos:hover{
+    font-weight: bold;
+}
+
+
+#cotizar{
+    margin-top: 4rem;
+    max-width: min-content;
+    margin-inline: 10px;
+}
+
+#cotizar:hover{
+    font-weight: bold;
+}
+
+.decoracion-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: #000;
+    padding-bottom: 15px;
+}
+
+.decoracion-header h2 {
+    width: 100%;
+    text-align: center;
+    color: #fdfdfd;
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-size: 20px;
+}
+
+.descripcion {
+    width: 100%;
+    height: 208px;
+    padding-inline: 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block: 0;
+    font-weight: 100;
+    font-size: 14px;
+    font-family: 'Open Sans';
+    line-height: 24px;
+    color: #666;
+}
+
+.contenedor-boton {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin-top: 0;
+}
+
+.contenedor-boton .boton-seleccionar {
+    color: #fdfdfd;
+    background-color: #000;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 20px;
+    padding-block: 13px;
+    border-radius: 100px;    
+}
+
+.boton-seleccionar:hover {
+    font-weight: bold;
+}
+
+input{
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    border: 1px solid #c1c1c1;
+    border-radius: 0%;
+    padding-left: 10px;
+    color: #555;
+    text-align: center;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    display: none; 
+}
 

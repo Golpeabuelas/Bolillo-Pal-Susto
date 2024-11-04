@@ -28,27 +28,52 @@
         </div>
     </header>
 
-    <div class="contenedor">
+    <div class="contenedor" id="form_registro">
         <h2 style="letter-spacing: 5px;">REGISTRATE</h2>
 
         <hr class="adorno-pequeño">
         <hr class="adorno-grande">
 
-        <form action="">
+        <form>
             <p>Correo</p>
-            <input type="email">
+            <input type="email" class="input" required>
 
-            <p>Contraseña</p>
-            <input type="text">
+            <p>Nombre</p>
+            <input type="text" class="input" required>
 
             <p>Teléfono</p>
-            <input type="number" placeholder="+55">
+            <input type="number" placeholder="+55" class="input" required>
 
-            <input type="submit" value="REGISTRARSE" class="boton" style="margin-top: 2.8rem;" href="sign-password">
+            <input type="button" value="REGISTRARSE" class="boton" style="margin-top: 2.8rem;" id="btn_cambiar">
         </form>
 
         <a href="sign-in" class="enlace-navegacion">¿Ya tienes cuenta? <span>¡Inicia sesión!</span></a>
+    </div>
 
+    <div class="contenedor" id="form_password" style="display: none; text-align: center;"">
+        <h2>COMPLETAR REGISTRO</h2>
+
+        <hr class="adorno-pequeño">
+        <hr class="adorno-grande">
+
+        <form action="/agregarUsuario" method="post" class="pswrd" id="form" onsubmit="pasar_form_passwords()">
+            <p>Contraseña</p>
+            <input type="password" name="password">
+
+            <p>Confirmar contraseña</p>
+            <input type="password">
+
+            <p>Fecha de nacimiento</p>
+            <input type="date" style="padding-right: 10px;" name="fecha_nac">
+
+            <input type="text" class="llenar" style="display: none;" name="correo" id="correo">
+            <input type="text" class="llenar" style="display: none;" name="nombre" id="nombre">
+            <input type="text" class="llenar" style="display: none;" name="telefono" id="telefono">
+
+            <input type="submit" value="FINALIZAR REGISTRO" class="boton" style="margin-top: 2.8rem;">
+        </form style="margin-bottom: 8rem;">
+
+        <a href="sign-in" class="enlace-navegacion">¿Ya tienes cuenta? <span>¡Inicia sesión!</span></a>
     </div>
 
     <footer class="footer">
@@ -86,5 +111,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="../javascript/registrarse.js"></script>
+    <script src="../../server-functions/conexiones-sql/mysql-sesiones.js"></script>
 </body>
 </html>
