@@ -25,6 +25,23 @@ productos.post('/agregarProducto', (req, res) => {
     });
 });
 
+productos.post('/borrarProducto', (req, res) => {
+    const id = req.body.id;
+    
+    connection.query('DELETE FROM producto WHERE id_producto = ?', [id], (err, resultado, fields) => {
+
+        if (err) {
+            console.error('Error al borrar el usuario:', err);
+            return res.status(500).send("Error al borrar el usuario");
+        }
+        if (resultado.affectedRows === 0) {
+            return res.status(404).send("Usuario no encontrado");
+        }
+        return res.send(`Usuario con ID ${id} borrado correctamente`);
+    });
+});
+
+
 productos.get('/api/productos', (req, res) => {
     connection.query('SELECT * FROM producto', (err, respuesta) => {
         if (err) {

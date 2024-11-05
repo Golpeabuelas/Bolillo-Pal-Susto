@@ -24,4 +24,39 @@ sesiones.post('/agregarUsuario', (req, res) => {
     });
 });
 
+sesiones.post('/iniciarSesion', (req, res) => {
+    const correo = req.body.correo;
+    const password = req.body.password;
+
+    if (!correo || !password) {
+        return res.status(400).json({ error: "Correo y contraseña son requeridos" });
+    }
+
+    connection.query('SELECT * FROM usuario WHERE correo = ?', [correo], (err, resultados) => {
+        if (err) {
+            console.log("Error en la consulta:", err);
+            return res.status(500).send("Error al verificar usuario");
+        }
+
+        if (resultados.length === 0) {
+            return res.status(404).json({ error: "Usuario no encontrado" });
+        }
+
+        const usuario = resultados[0];
+
+        if (usuario.password !== password) {
+            return res.status(401).json({ error: "Contraseña incorrecta" });
+        }
+
+        res.status(200).json({
+            message: "Inicio de sesión exitoso",
+            usuario: {
+                id: usuario.id,
+                nombre: usuario.nombre,
+                correo: usuario.correo,
+            }
+        });
+    });
+});
+
 export default sesiones;
