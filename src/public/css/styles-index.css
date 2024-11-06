@@ -23,6 +23,7 @@ body {
     width: 20vw;
     min-width: 204px;
     margin: 1.5rem;
+    box-shadow: 0 4px 10px #888;
 }
 
 .img-producto {
@@ -33,6 +34,7 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 0.5rem;
+    padding-inline: 5px;
 }
 
 .datos-producto h2, .datos-producto p {
@@ -41,5 +43,7 @@ body {
     font-weight: 300;
     font-size: 1.3rem;
 }
+
+
 
 

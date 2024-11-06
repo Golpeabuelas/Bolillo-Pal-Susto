@@ -34,16 +34,16 @@
         <hr class="adorno-pequeño">
         <hr class="adorno-grande">
 
-        <form action="iniciarSesion" method="post">
+        <form id="log-in">
             <p>Correo</p>
-            <input type="email" name="correo">
+            <input type="email" name="correo" id="correo">
 
             <p>Contraseña</p>
-            <input type="password" name="password">
+            <input type="password" name="password" id="password">
 
             <a href="" class="enlace-recuperar">Olvidé mi contraseña</a>
 
-            <input type="submit" value="INICIAR SESIÓN" class="boton">
+            <input type="submit" value="INICIAR SESIÓN" class="boton" id="iniciar">
         </form>
 
         <a href="sign-up" class="enlace-navegacion">¿Aún no tienes cuenta? <span>¡REGISTRATE!</span></a>
@@ -85,5 +85,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="../javascript/cargar-datos/cargar-usuario.js"></script>
 </body>
 </html>

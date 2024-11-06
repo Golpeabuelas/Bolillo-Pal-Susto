@@ -133,6 +133,22 @@
     text-decoration: underline;
 }
 
+.gestionar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gestionar:hover .icono-header{
+    width: 25px;
+    border-bottom: 1px solid #444;
+}
+
+.gestionar:hover .item-navegacion{
+    font-weight: bold;
+    color: #000;
+}
+
 @media (min-width: 768px) {
     .decoracion-footer {
         flex: 1 1 30%;

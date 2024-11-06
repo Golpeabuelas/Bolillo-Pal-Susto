@@ -1,7 +1,6 @@
 import { Router } from 'express';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import fs from 'fs';
 
 import connection from './connection.js';
 
@@ -31,16 +30,15 @@ productos.post('/borrarProducto', (req, res) => {
     connection.query('DELETE FROM producto WHERE id_producto = ?', [id], (err, resultado, fields) => {
 
         if (err) {
-            console.error('Error al borrar el usuario:', err);
-            return res.status(500).send("Error al borrar el usuario");
+            console.error('Error al borrar el producto:', err);
+            return res.status(500).send("Error al borrar el producto");
         }
         if (resultado.affectedRows === 0) {
-            return res.status(404).send("Usuario no encontrado");
+            return res.status(404).send("Producto no encontrado");
         }
-        return res.send(`Usuario con ID ${id} borrado correctamente`);
+        return res.send(`Producto con ID: ${id} borrado correctamente`);
     });
 });
-
 
 productos.get('/api/productos', (req, res) => {
     connection.query('SELECT * FROM producto', (err, respuesta) => {

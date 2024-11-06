@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../imagenes/favicon.jpeg" type="image/x-icon">
-    <title>Login</title>
+    <title>Gestion Inventario</title>
 
+    <link rel="stylesheet" href="../css/styles-gestionar-inventario.css">
     <link rel="stylesheet" href="../css/footer&header.css">
-    <link rel="stylesheet" href="../css/formularios.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,54 +26,66 @@
             <a href="sign-in"><img class="icono-header item-navegacion" src="../imagenes/header/usuario.png" alt=""></a>
             <a href=""><img class="icono-header item-navegacion" src="../imagenes/header/carrito.png" alt=""></a>
         </div>
+
+        <div class="gestionar" style="display: none;" id="gestionar">
+            
+        </div>        
+
+        <input type="hidden" id="id_cargada" name="id_cargada">
     </header>
 
-    <div class="contenedor" id="form_registro">
-        <h2 style="letter-spacing: 5px;">REGISTRATE</h2>
+    <div class="contenedor-gestion">
+        <div class="contenedor-botones">
+            <button class="btn-gestion">
+                <div class="boton-contenedor">
+                    <h2>AÑADIR PRODUCTO</h2>
+                    <div class="contenedor-img"> 
+                        <img src="../imagenes/header/croissant.png" alt="Imagen Redonda">
+                    </div>
+                </div>
+            </button>
+            
+            <button class="btn-gestion">
+                <div class="boton-contenedor">
+                    <h2>EDITAR PRODUCTO</h2>
+                    <div class="contenedor-img"> 
+                        <img src="../imagenes/header/croissant.png" alt="Imagen Redonda">
+                    </div>
+                </div>
+            </button>
 
-        <hr class="adorno-pequeño">
-        <hr class="adorno-grande">
+            <button class="btn-gestion">
+                <div class="boton-contenedor">
+                    <h2>BORRAR PRODUCTO</h2>
+                    <div class="contenedor-img"> 
+                        <img src="../imagenes/header/croissant.png" alt="Imagen Redonda">
+                    </div>
+                </div>
+            </button>
+        </div>
+    
+        <div class="contenedor-producto" id="contenedor-producto">
+            <img src="../imagenes/img_default.png" class="img-producto" id="contenedor_imagen">
+            <div class="datos-producto">
+                <h2 id="cargar-nombre">Nombre</h2>
+                <p id="cargar-precio">Precio</p>
+            </div>
+        </div>
 
-        <form>
-            <p>Correo</p>
-            <input type="email" class="input" required>
+        <div class="contenedor-formularios" id="form_añadir">
+            <form action="/agregarProducto" method="POST">
+                <input type="text" placeholder="Nombre del producto" name="nombre" id="nombre">
+                <input type="text" placeholder="Descripción del producto" name="descripcion" id="descripcion">
+                <label for="file">Imagen del producto</label>
+                <input type="file" placeholder="Imagen del producto" style="display: none;" name="file" id="file">
+                <input type="text" readonly name="imagen" id="imagen">
+                <input type="text" placeholder="Precio del producto" name="precio" id="precio">
+                <input type="text" placeholder="Categoria del producto" name="categoria" id="categoria">
 
-            <p>Nombre</p>
-            <input type="text" class="input" required>
-
-            <p>Teléfono</p>
-            <input type="number" placeholder="+55" class="input" required>
-
-            <input type="button" value="REGISTRARSE" class="boton" style="margin-top: 2.8rem;" id="btn_cambiar">
-        </form>
-
-        <a href="sign-in" class="enlace-navegacion">¿Ya tienes cuenta? <span>¡Inicia sesión!</span></a>
-    </div>
-
-    <div class="contenedor" id="form_password" style="display: none; text-align: center;"">
-        <h2>COMPLETAR REGISTRO</h2>
-
-        <hr class="adorno-pequeño">
-        <hr class="adorno-grande">
-
-        <form action="/agregarUsuario" method="post" class="pswrd" id="form" onsubmit="pasar_form_passwords()">
-            <p>Contraseña</p>
-            <input type="password" name="password">
-
-            <p>Confirmar contraseña</p>
-            <input type="password">
-
-            <p>Fecha de nacimiento</p>
-            <input type="date" style="padding-right: 10px;" name="fecha_nac">
-
-            <input type="text" class="llenar" style="display: none;" name="correo" id="correo">
-            <input type="text" class="llenar" style="display: none;" name="nombre" id="nombre">
-            <input type="text" class="llenar" style="display: none;" name="telefono" id="telefono">
-
-            <input type="submit" value="FINALIZAR REGISTRO" class="boton" style="margin-top: 2.8rem;">
-        </form style="margin-bottom: 8rem;">
-
-        <a href="sign-in" class="enlace-navegacion">¿Ya tienes cuenta? <span>¡Inicia sesión!</span></a>
+                <button class="boton" id="previsualizar" onclick="rellenarCard()" type="button">Previsualizar</button>
+                <input type="submit" value="Agregar Producto" id="agregar" class="boton" style="display: none;">
+            </form>
+        </div>
     </div>
 
     <footer class="footer">
@@ -112,6 +124,6 @@
         </div>
     </footer>
 
-    <script src="../javascript/styles-functions/registrarse.js"></script>
+    <script src="../javascript/styles-functions/agregar-producto.js"></script>
 </body>
 </html>

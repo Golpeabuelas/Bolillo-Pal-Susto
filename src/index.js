@@ -1,6 +1,5 @@
 import express from 'express';  
 import morgan from 'morgan';
-import mysql from "mysql2";  
 
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
@@ -15,7 +14,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 app.set('port', process.env.PORT || 3000);
 
 app.use(morgan('dev'));
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(join(__dirname, 'public')));
 app.use(router);

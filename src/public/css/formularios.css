@@ -43,6 +43,8 @@ body {
 form{
     display: flex;
     flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 h2{
@@ -59,11 +61,6 @@ p{
     text-align: left;
     color: #b1b1b1;
     margin-block: 5px;
-}
-
-form{
-    width: 100%;
-    box-sizing: border-box;
 }
 
 .pswrd{

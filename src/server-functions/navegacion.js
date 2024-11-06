@@ -25,4 +25,8 @@ router.get('/cotizacion', (req, res) => {
     res.sendFile(join(__dirname, '..', 'public', 'html', 'cotizador.html'));
 });
 
+router.get('/gestionar-inventario', (req, res) => {
+    res.sendFile(join(__dirname, '..', 'public', 'html', 'gestionar-inventario.html'));
+});
+
 export default router;
