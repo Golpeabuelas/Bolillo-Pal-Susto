@@ -16,7 +16,7 @@ const cargarProductos = async () => {
             </div>
         `;
     }
-};
+}; 
 
 const cargarUsuario = async () => {
     const response = await fetch('/cargarSesion');
@@ -43,7 +43,7 @@ const verificarPermisos = async () => {
         const objeto_json = await response.json();
         const contenedor = document.getElementById('gestionar');
         
-        if (objeto_json.permisos === 1) {
+        if (objeto_json.permisos == 1) {
             contenedor.innerHTML += `
                 <a href="gestionar-inventario" class="item-navegacion enlace" style="margin-right: 1rem;">GESTIONAR INVENTARIO</a>
                 <a href="gestionar-inventario"><img src="../imagenes/header/croissant.png" class="icono-header"></a>

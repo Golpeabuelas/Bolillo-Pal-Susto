@@ -75,7 +75,7 @@ sesiones.post('/consultarPermisos', (req, res) => {
         if (err) {
             return res.status(404).json({ error: 'Usuario no encontrado' });
         }
-
+        
         res.json({ permisos: resultados[0].permisos })
     })
 })
