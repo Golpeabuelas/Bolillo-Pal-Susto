@@ -29,7 +29,7 @@ insert into sesioniniciada(id_sesion) values (0);
 drop table producto;
 select * from sesioniniciada;
 
-insert into usuario(nombre, correo, telefono, password, fecha_nac, permisos) values ('Julian', 'chavez.garcia.julian2@gmail.com', '5512780356',	'almalover',	2007-11-05,	1);
+insert into usuario(nombre, correo, telefono, password, fecha_nac, permisos) values ('Julian', 'chavez.garcia.julian2@gmail.com', '5512780356',	'almalover',	'2007-11-05',	true);
 
 insert into sesioniniciada(id_sesion) values (1);
 

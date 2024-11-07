@@ -11,7 +11,7 @@ import productos from './server-functions/conexiones-sql/mysql-productos.js';
 const app = express();
 const __dirname = dirname(fileURLToPath(import.meta.url)); 
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 3006);
 
 app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: true }));

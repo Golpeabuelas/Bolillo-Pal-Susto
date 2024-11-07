@@ -5,14 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../imagenes/favicon.jpeg" type="image/x-icon">
     <title>Gestion Inventario</title>
-
-    <link rel="stylesheet" href="../css/materialize.css">
-    <link rel="stylesheet" href="../css/styles-slider-gestionar.css">
+    
     <link rel="stylesheet" href="../css/styles-gestionar-inventario.css">
     <link rel="stylesheet" href="../css/footer&header.css">
-
-    <script src="../javascript/styles-functions/materialize.js"></script>
-    <script src="../javascript/styles-functions/carrusel-editar.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -80,13 +75,13 @@
         <div class="contenedor-formularios" >
             <div class="formulario-agregar" id="form_añadir" style="display: none;">
                 <form action="/agregarProducto" method="POST">
-                    <input class="input" type="text" placeholder="Nombre del producto" name="nombre" id="nombre">
-                    <input class="input" type="text" placeholder="Descripción del producto" name="descripcion" id="descripcion">
-                    <label class="input" for="file">Imagen del producto</label>
-                    <input class="input" type="text" placeholder="Precio del producto" name="precio" id="precio">
-                    <input class="input" type="text" placeholder="Categoria del producto" name="categoria" id="categoria">
-                    <input class="input" type="file" placeholder="Imagen del producto" style="display: none;" name="file" id="file">
-                    <input class="input" type="text" readonly name="imagen" id="imagen">
+                    <input required class="input" type="text" placeholder="Nombre del producto" name="nombre" id="nombre">
+                    <input required class="input" type="text" placeholder="Descripción del producto" name="descripcion" id="descripcion">
+                    <label required class="input" for="file">Imagen del producto</label>
+                    <input required class="input" type="text" placeholder="Precio del producto" name="precio" id="precio">
+                    <input required class="input" type="text" placeholder="Categoria del producto" name="categoria" id="categoria">
+                    <input required class="input" type="file" placeholder="Imagen del producto" style="display: none;" name="file" id="file">
+                    <input required class="input" type="text" readonly name="imagen" style="display: none;" id="imagen">
     
                     <button class="boton" id="previsualizar" onclick="rellenarCard()" type="button">Previsualizar</button>
                     <input type="submit" value="Agregar Producto" id="agregar" class="boton" style="display: none;">
@@ -94,25 +89,25 @@
             </div>
 
             <div class="formulario-editar" id="form_editar" style="display: none;">
-                <div class="contenedor-slider" >
-                    <div class="row">
-                        <div class="col s12">
-                            <div class="carousel center-align">
-                                
-                            </div>
-                        </div> 
-                    </div>
-                </div>
-                
-                <form action="" method="POST">
-
-                </form>
-                
+                <form action="/editarProducto" method="POST" id="form_editar_">
+                    <input required class="input" type="text" placeholder="ID del producto" name="id_editar" id="id_editar">
+                    <input required class="input" type="text" placeholder="Nombre del producto" name="nombre_editar" id="nombre_editar">
+                    <input required class="input" type="text" placeholder="Descripción del producto" name="descripcion_editar" id="descripcion_editar">
+                    <label required class="input" for="file_editar">Imagen del producto</label>
+                    <input required class="input" type="text" placeholder="Precio del producto" name="precio_editar" id="precio_editar">
+                    <input required class="input" type="text" placeholder="Categoria del producto" name="categoria_editar" id="categoria_editar">
+                    <input required class="input" type="file" placeholder="Imagen del producto" style="display: none;" name="file_editar" id="file_editar">
+                    <input required class="input" type="text" readonly name="imagen_editar" style="display: none;" id="imagen_editar">
+    
+                    <button class="boton" id="previsualizar" onclick="rellenarCard_editar()" type="button">Previsualizar</button>
+                    <input type="submit" value="Editar Producto" id="agregar_editar" class="boton">
+                </form> 
             </div>
 
             <div class="formulario-borrar" id="form_borrar" style="display: none;">
-                <form action="" method="POST">
-                    <input type="text" placeholder="Nombre del producto" name="nombre" id="nombre">
+                <form action="/borrarProducto" method="POST">
+                    <input required class="input" type="text" placeholder="ID del producto" name="id_borrar" id="id_borrar">
+                    <input type="submit" value="Editar Producto" id="agregar_borrar" class="boton">
                 </form>
             </div>
         </div>
@@ -154,8 +149,8 @@
         </div>
     </footer>
 
-    <script src="../javascript/styles-functions/agregar-producto.js"></script>
-    <script src="../javascript/styles-functions/editar-producto.js"></script>
+    <script src="../javascript/productos-metodos/agregar-producto.js"></script>
+    <script src="../javascript/productos-metodos/editar-producto.js"></script>
     <script src="../javascript/styles-functions/navegacion-gestion.js"></script>
 </body>
 </html>

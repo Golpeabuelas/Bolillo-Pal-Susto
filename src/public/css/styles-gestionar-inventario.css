@@ -36,11 +36,16 @@
     transition: background-color 0.3s;
 }
 
+.producto{
+    max-width: 204px;
+}
+
 .contenedor-producto {
     width: 20%;
     min-width: 204px;
     margin: 1.5rem;
     box-shadow: 0 4px 10px #888;
+    flex-wrap: wrap;
 }
 
 .img-producto {
@@ -91,8 +96,13 @@
 }
 
 .contenedor-formularios {
+    max-height: 500px;
     width: calc(50% - 2rem);
     margin-inline: .75rem;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .input{
@@ -132,6 +142,27 @@ label {
     height: 40px;
     box-sizing: border-box;
     margin-bottom: 2rem;
+    background-color: #000;
+    color: #f1f1f1;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: .5s;
+}
+
+.boton:hover{
+    background-color: transparent;
+    color: #000;
+    transition: .7s;
+    border-color: #000;
+}
+
+.editar{
+    font-family: 'Montserrat';
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    margin-bottom: 2rem;
     background-color: #444;
     color: #b1b1b1;
     letter-spacing: 3px;
@@ -140,7 +171,7 @@ label {
     transition: .5s;
 }
 
-.boton:hover{
+.editar:hover{
     background-color: transparent;
     color: #444;
     transition: .7s;
