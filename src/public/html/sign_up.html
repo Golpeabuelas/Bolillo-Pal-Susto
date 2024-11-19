@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../imagenes/favicon.jpeg" type="image/x-icon">
-    <title>Bolillo pal susto</title>
-    
-    <link rel="stylesheet" href="../css/styles-index.css">
+    <title>Login</title>
+
     <link rel="stylesheet" href="../css/footer&header.css">
+    <link rel="stylesheet" href="../css/formularios.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,8 +37,52 @@
         <input type="hidden" id="id_cargada" name="id_cargada">
     </header>
 
-    <div class="contenedor_inventario" id="contenedor_inventario">
-        
+    <div class="contenedor" id="form_registro">
+        <h2 style="letter-spacing: 5px;">REGISTRATE</h2>
+
+        <hr class="adorno_pequeño">
+        <hr class="adorno_grande">
+
+        <form>
+            <p>Correo</p>
+            <input type="email" class="input" required>
+
+            <p>Nombre</p>
+            <input type="text" class="input" required>
+
+            <p>Teléfono</p>
+            <input type="number" placeholder="+55" class="input" required>
+
+            <input type="button" value="REGISTRARSE" class="boton" style="margin-top: 2.8rem;" id="btn_cambiar">
+        </form>
+
+        <a href="sign_in" class="enlace_navegacion">¿Ya tienes cuenta? <span>¡Inicia sesión!</span></a>
+    </div>
+
+    <div class="contenedor" id="form_password" style="display: none; text-align: center;">
+        <h2>COMPLETAR REGISTRO</h2>
+
+        <hr class="adorno_pequeño">
+        <hr class="adorno_grande">
+
+        <form action="/agregarUsuario" method="post" class="pswrd" id="form" onsubmit="pasar_form_passwords()">
+            <p>Contraseña</p>
+            <input type="password" name="password">
+
+            <p>Confirmar contraseña</p>
+            <input type="password">
+
+            <p>Fecha de nacimiento</p>
+            <input type="date" style="padding-right: 10px;" name="fecha_nac">
+
+            <input type="text" class="llenar" style="display: none;" name="correo" id="correo">
+            <input type="text" class="llenar" style="display: none;" name="nombre" id="nombre">
+            <input type="text" class="llenar" style="display: none;" name="telefono" id="telefono">
+
+            <input type="submit" value="FINALIZAR REGISTRO" class="boton" style="margin-top: 2.8rem;">
+        </form style="margin-bottom: 8rem;">
+
+        <a href="sign_in" class="enlace_navegacion">¿Ya tienes cuenta? <span>¡Inicia sesión!</span></a>
     </div>
 
     <footer class="footer">
@@ -77,7 +121,6 @@
         </div>
     </footer>
 
-    <script src="../javascript/cargar-datos/generar_pagina.js" type="module"></script>
+    <script src="../javascript/styles-functions/registrarse.js"></script>
 </body>
 </html>
-

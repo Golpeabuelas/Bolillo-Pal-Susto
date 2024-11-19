@@ -33,6 +33,4 @@ document.getElementById('form').addEventListener('submit', (event) => {
     document.getElementById('correo').value = correo;
     document.getElementById('nombre').value = nombre;
     document.getElementById('telefono').value = telefono;
-
-    alert(document.getElementById('telefono').value);
 });

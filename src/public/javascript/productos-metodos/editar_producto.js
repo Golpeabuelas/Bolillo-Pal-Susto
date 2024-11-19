@@ -20,8 +20,8 @@ function rellenarCard_editar() {
     const cargarNombre = document.getElementById('nombre_editar').value;
     const cargarPrecio = document.getElementById('precio_editar').value;
 
-    document.querySelector("#cargar-nombre").textContent = cargarNombre;
-    document.querySelector("#cargar-precio").textContent = cargarPrecio;
+    document.querySelector("#cargar_nombre").textContent = cargarNombre;
+    document.querySelector("#cargar_precio").textContent = cargarPrecio;
 
     document.getElementById('agregar_editar').style.display = 'block'
 }

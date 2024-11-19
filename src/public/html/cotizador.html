@@ -7,11 +7,11 @@
     <title>Cotizador</title>
 
     <link rel="stylesheet" href="../css/materialize.css">
-    <link rel="stylesheet" href="../css/styles-cotizacion.css">
+    <link rel="stylesheet" href="../css/styles_cotizacion.css">
     <link rel="stylesheet" href="../css/footer&header.css">
 
-    <script src="../javascript/styles-functions/carrusel.js"></script>
-    <script src="../javascript/styles-functions/materialize.js"></script>
+    <script src="../javascript/styles_functions/carrusel.js"></script>
+    <script src="../javascript/styles_functions/materialize.js"></script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,25 +20,34 @@
 </head>
 <body>
     <header class="header">
-        <a href="index" class="logo"><h1 class="h1">Bolillo pal susto</h1></a>
-        
-        <div class="enlaces-navegacion">
-            <a href="" class="item-navegacion enlace">CATÁLOGO</a>
-            <a href="" class="item-navegacion enlace">SUCURSALES</a>
-            <a href="cotizacion" class="item-navegacion enlace">COTIZADOR</a>
-            <a href=""><img class="icono-header item-navegacion" src="../imagenes/header/buscar.png" alt=""></a>
-            <a href="sign-in"><img class="icono-header item-navegacion" src="../imagenes/header/usuario.png" alt=""></a>
-            <a href=""><img class="icono-header item-navegacion" src="../imagenes/header/carrito.png" alt=""></a>
+        <div class="contenedor_logo">
+            <a href="index" class="enlace_logo"><h1 class="jerarquia_logo">Bolillo pal susto</h1></a>
         </div>
+        
+        <div class="contenedor_enlaces_navegacion">
+            <a class="item_navegacion enlace" href="">CATÁLOGO</a>
+            <a class="item_navegacion enlace" href="">SUCURSALES</a>
+            <a class="item_navegacion enlace" href="cotizacion" >COTIZADOR</a>
+            
+            <a href=""><img class="icono_header item_navegacion" src="../imagenes/header/buscar.png" alt=""></a>
+            <a href="sign_in"><img class="icono_header item_navegacion" src="../imagenes/header/usuario.png" alt=""></a>
+            <a href=""><img class="icono_header item_navegacion" src="../imagenes/header/carrito.png" alt=""></a>
+        </div>
+
+        <div class="contenedor_gestionar" style="display: none;" id="gestionar">
+            
+        </div>        
+
+        <input type="hidden" id="id_cargada" name="id_cargada">
     </header>
 
-    <div class="contenedor-slider" >
+    <div class="contenedor_slider" >
         <div class="row">
             <div class="col s12">
                 <h2 class="center-align">SELECCIONE UNA FESTIVIDAD</h2>
 
-                <hr class="adorno-pequeño">
-                <hr class="adorno-grande">
+                <hr class="adorno_pequeño">
+                <hr class="adorno_grande">
 
                 <div class="carousel center-align">
                     <div class="carousel-item">
@@ -211,41 +220,41 @@
     </div>
 
     <footer class="footer">
-        <div class="decoracion-footer">
-            <img class="imagen-decorativa" src="https://sso.jexbit.mx/FileManager/thumbs/d7e886ff-60ff-475b-86b3-fd80c6e123a7.png" alt="Imagen ilustrativa">
+        <div class="contenedor_decoracion_footer">
+            <img class="imagen_decorativa" src="https://sso.jexbit.mx/FileManager/thumbs/d7e886ff-60ff-475b-86b3-fd80c6e123a7.png" alt="Imagen ilustrativa">
             
-            <p class="texto-footer">Julian Chávez García</p>
-            <p class="texto-footer">Almita póngame 10</p>
+            <p class="texto_footer">Julian Chávez García</p>
+            <p class="texto_footer">Almita póngame 10</p>
         </div>
 
-        <div class="enlaces-footer">
-            <h3 class="h3">INICIO</h3>
+        <div class="contenedor_enlaces_footer">
+            <h3 class="enlace_footer_importante">INICIO</h3>
             
-            <a href="" class="enlace-footer">Tienda</a>
-            <a href="" class="enlace-footer">Sucursales</a>
-            <a href="" class="enlace-footer">Blog</a>
-            <a href="" class="enlace-footer">Contáctanos</a>
-            <a href="" class="enlace-footer">Conócenos</a>
+            <a href="" class="enlace_footer">Tienda</a>
+            <a href="" class="enlace_footer">Sucursales</a>
+            <a href="" class="enlace_footer">Blog</a>
+            <a href="" class="enlace_footer">Contáctanos</a>
+            <a href="" class="enlace_footer">Conócenos</a>
         </div>
 
-        <div class="miembros-footer">
-            <h3 class="h3">MIEMBROS</h3>
+        <div class="miembros_footer">
+            <h3 class="enlace_footer_importante">MIEMBROS</h3>
             
-            <a href="" class="enlace-footer">Mi cuenta</a>
+            <a href="" class="enlace_footer">Mi cuenta</a>
         </div>
 
-        <div class="redes-sociales">
-            <h3 class="h3">SÍGUENOS</h3>
+        <div class="contenedor_redes_sociales">
+            <h3 class="enlace_footer_importante">SÍGUENOS</h3>
             
-            <div class="iconos-redes">
-                <a href=""><img class="img-footer" src="../imagenes/footer/facebook.png" alt="Facebook"></a>
-                <a href=""><img class="img-footer" src="../imagenes/footer/twitter.png" alt="Twitter"></a>
-                <a href=""><img class="img-footer" src="../imagenes/footer/instagram.png" alt="Instagram"></a>
-                <a href=""><img class="img-footer" src="../imagenes/footer/tiktok.png" alt="TikTok"></a>
+            <div class="contenedor_iconos_redes">
+                <a href=""><img class="img_footer" src="../imagenes/footer/facebook.png" alt="Facebook"></a>
+                <a href=""><img class="img_footer" src="../imagenes/footer/twitter.png" alt="Twitter"></a>
+                <a href=""><img class="img_footer" src="../imagenes/footer/instagram.png" alt="Instagram"></a>
+                <a href=""><img class="img_footer" src="../imagenes/footer/tiktok.png" alt="TikTok"></a>
             </div>
         </div>
     </footer>
 
-    <script src="../javascript/styles-functions/navegacion-cotizacion.js"></script>
+    <script src="../javascript/styles-functions/navegacion_cotizacion.js"></script>
 </body>
 </html>

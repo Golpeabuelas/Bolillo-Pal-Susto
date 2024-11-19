@@ -11,7 +11,7 @@ body {
     background-color: #fdfdfd;
 }
 
-.contenedor-productos {
+.contenedor_inventario {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -19,25 +19,25 @@ body {
     text-align: center;
 }
 
-.producto {
+.contenedor_producto {
     width: 20vw;
     min-width: 204px;
     margin: 1.5rem;
     box-shadow: 0 4px 10px #888;
 }
 
-.img-producto {
+.imagen_producto {
     width: 100%;
 }
 
-.datos-producto {
+.contenedor_datos_producto {
     display: flex;
     justify-content: space-between;
     margin-top: 0.5rem;
     padding-inline: 5px;
 }
 
-.datos-producto h2, .datos-producto p {
+.contenedor_datos_producto h2, .contenedor_datos_producto p {
     font-family: 'Montserrat', sans-serif;
     color: #666;
     font-weight: 300;

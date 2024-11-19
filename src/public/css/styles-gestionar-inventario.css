@@ -1,4 +1,4 @@
-.contenedor-gestion {
+.contenedor_gestion {
     align-self: center;
     display: flex;
     flex-direction: row;
@@ -8,19 +8,19 @@
     margin-inline: auto;
 }
 
-.btn-gestion {
+.btn_gestion {
     background-color: transparent;
     border-style: hidden;
     margin-block: 5rem;
 }
 
 
-.contenedor-botones {
+.contenedor_botones {
     width: calc(30% - 2rem);
     margin-inline: .75rem;
 }
 
-.boton-contenedor {
+.boton_contenedor {
     display: flex;
     justify-content: space-between; 
     align-items: center; 
@@ -40,7 +40,7 @@
     max-width: 204px;
 }
 
-.contenedor-producto {
+.contenedor_producto {
     width: 20%;
     min-width: 204px;
     margin: 1.5rem;
@@ -48,36 +48,36 @@
     flex-wrap: wrap;
 }
 
-.img-producto {
+.img_producto {
     width: 100%;
 }
 
-.datos-producto {
+.datos_producto {
     display: flex;
     justify-content: space-between;
     margin-top: 0.5rem;
     padding-inline: 5px;
 }
 
-.datos-producto h2, .datos-producto p {
+.datos_producto h2, .datos_producto p {
     font-family: 'Montserrat', sans-serif;
     color: #666;
     font-weight: 300;
     font-size: 1.3rem;
 }
 
-.boton-contenedor:hover {
+.boton_contenedor:hover {
     background-color: #0056b3;
 }
 
-.boton-contenedor h2 {
+.boton_contenedor h2 {
     margin: 0; 
     font-size: 16px;
     font-family: 'Montserrat';
     font-weight: 300;
 }
 
-.contenedor-img {
+.contenedor_img {
     margin-left: 1rem;
     background-color: #fff;
     width: 35px;
@@ -88,14 +88,14 @@
     align-items: center;
 }
 
-.boton-contenedor img {
+.boton_contenedor img {
     width: 25px;
     height: 25px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.contenedor-formularios {
+.contenedor_formularios {
     max-height: 500px;
     width: calc(50% - 2rem);
     margin-inline: .75rem;

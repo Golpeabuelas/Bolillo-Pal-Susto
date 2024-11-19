@@ -53,7 +53,7 @@ async function cargarNuevoUsuario() {
 } 
 
 function cambiarPagina() {
-    window.location.href = 'http://localhost:3000/index';
+    window.location.href = '/index';
 }
 
 

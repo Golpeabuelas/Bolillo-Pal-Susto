@@ -1,10 +1,6 @@
 import { Router } from 'express';
-import { join, dirname } from 'path';
-import { fileURLToPath } from 'url';
-
 import connection from './connection.js';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
 const productos = Router();
 
 productos.post('/agregarProducto', (req, res) => {
@@ -20,7 +16,6 @@ productos.post('/agregarProducto', (req, res) => {
             return res.status(500).send("Error al conectar");
         }
        
-        res.sendFile(join(__dirname, '..', '..', 'public', 'html', 'index.html'));
     });
 });
 
@@ -37,7 +32,6 @@ productos.post('/borrarProducto', (req, res) => {
             return res.status(404).send("Producto no encontrado");
         }
         
-       res.sendFile(join(__dirname, '..', '..', 'public', 'html', 'index.html'));
     });
 });
 

@@ -16,64 +16,67 @@
 </head>
 <body>
     <header class="header">
-        <a href="index" class="logo"><h1 class="h1">Bolillo pal susto</h1></a>
+        <div class="contenedor_logo">
+            <a href="index" class="enlace_logo"><h1 class="jerarquia_logo">Bolillo pal susto</h1></a>
+        </div>
         
-        <div class="enlaces-navegacion">
-            <a href="" class="item-navegacion enlace">CATÁLOGO</a>
-            <a href="" class="item-navegacion enlace">SUCURSALES</a>
-            <a href="cotizacion" class="item-navegacion enlace">COTIZADOR</a>
-            <a href=""><img class="icono-header item-navegacion" src="../imagenes/header/buscar.png" alt=""></a>
-            <a href="sign-in"><img class="icono-header item-navegacion" src="../imagenes/header/usuario.png" alt=""></a>
-            <a href=""><img class="icono-header item-navegacion" src="../imagenes/header/carrito.png" alt=""></a>
+        <div class="contenedor_enlaces_navegacion">
+            <a class="item_navegacion enlace" href="">CATÁLOGO</a>
+            <a class="item_navegacion enlace" href="">SUCURSALES</a>
+            <a class="item_navegacion enlace" href="cotizacion" >COTIZADOR</a>
+            
+            <a href=""><img class="icono_header item_navegacion" src="../imagenes/header/buscar.png" alt=""></a>
+            <a href="sign_in"><img class="icono_header item_navegacion" src="../imagenes/header/usuario.png" alt=""></a>
+            <a href=""><img class="icono_header item_navegacion" src="../imagenes/header/carrito.png" alt=""></a>
         </div>
 
-        <div class="gestionar" style="display: none;" id="gestionar">
+        <div class="contenedor_gestionar" style="display: none;" id="gestionar">
             
         </div>        
 
         <input type="hidden" id="id_cargada" name="id_cargada">
     </header>
 
-    <div class="contenedor-gestion">
-        <div class="contenedor-botones">
-            <button class="btn-gestion" id="btn_añadir">
-                <div class="boton-contenedor">
+    <div class="contenedor_gestion">
+        <div class="contenedor_botones">
+            <button class="btn_gestion" id="btn_añadir">
+                <div class="boton_contenedor">
                     <h2>AÑADIR PRODUCTO</h2>
-                    <div class="contenedor-img"> 
+                    <div class="contenedor_img"> 
                         <img src="../imagenes/header/croissant.png" alt="Imagen Redonda">
                     </div>
                 </div>
             </button>
             
-            <button class="btn-gestion" id="btn_editar">
-                <div class="boton-contenedor">
+            <button class="btn_gestion" id="btn_editar">
+                <div class="boton_contenedor">
                     <h2>EDITAR PRODUCTO</h2>
-                    <div class="contenedor-img"> 
+                    <div class="contenedor_img"> 
                         <img src="../imagenes/header/croissant.png" alt="Imagen Redonda">
                     </div>
                 </div>
             </button>
 
-            <button class="btn-gestion" id="btn_borrar">
-                <div class="boton-contenedor">
+            <button class="btn_gestion" id="btn_borrar">
+                <div class="boton_contenedor">
                     <h2>BORRAR PRODUCTO</h2>
-                    <div class="contenedor-img"> 
+                    <div class="contenedor_img"> 
                         <img src="../imagenes/header/croissant.png" alt="Imagen Redonda">
                     </div>
                 </div>
             </button>
         </div>
     
-        <div class="contenedor-producto" id="contenedor-producto">
-            <img src="../imagenes/img_default.png" class="img-producto" id="contenedor_imagen">
-            <div class="datos-producto">
-                <h2 id="cargar-nombre">Nombre</h2>
-                <p id="cargar-precio">Precio</p>
+        <div class="contenedor_producto" id="contenedor_producto">
+            <img src="../imagenes/img_default.png" class="img_producto" id="contenedor_imagen">
+            <div class="datos_producto">
+                <h2 id="cargar_nombre">Nombre</h2>
+                <p id="cargar_precio">Precio</p>
             </div>
         </div>
 
-        <div class="contenedor-formularios" >
-            <div class="formulario-agregar" id="form_añadir" style="display: none;">
+        <div class="contenedor_formularios" >
+            <div class="formulario_agregar" id="form_añadir" style="display: none;">
                 <form action="/agregarProducto" method="POST">
                     <input required class="input" type="text" placeholder="Nombre del producto" name="nombre" id="nombre">
                     <input required class="input" type="text" placeholder="Descripción del producto" name="descripcion" id="descripcion">
@@ -88,7 +91,7 @@
                 </form>
             </div>
 
-            <div class="formulario-editar" id="form_editar" style="display: none;">
+            <div class="formulario_editar" id="form_editar" style="display: none;">
                 <form action="/editarProducto" method="POST" id="form_editar_">
                     <input required class="input" type="text" placeholder="ID del producto" name="id_editar" id="id_editar">
                     <input required class="input" type="text" placeholder="Nombre del producto" name="nombre_editar" id="nombre_editar">
@@ -104,7 +107,7 @@
                 </form> 
             </div>
 
-            <div class="formulario-borrar" id="form_borrar" style="display: none;">
+            <div class="formulario_borrar" id="form_borrar" style="display: none;">
                 <form action="/borrarProducto" method="POST">
                     <input required class="input" type="text" placeholder="ID del producto" name="id_borrar" id="id_borrar">
                     <input type="submit" value="Editar Producto" id="agregar_borrar" class="boton">
@@ -114,43 +117,43 @@
     </div>
 
     <footer class="footer">
-        <div class="decoracion-footer">
-            <img class="imagen-decorativa" src="https://sso.jexbit.mx/FileManager/thumbs/d7e886ff-60ff-475b-86b3-fd80c6e123a7.png" alt="Imagen ilustrativa">
+        <div class="contenedor_decoracion_footer">
+            <img class="imagen_decorativa" src="https://sso.jexbit.mx/FileManager/thumbs/d7e886ff-60ff-475b-86b3-fd80c6e123a7.png" alt="Imagen ilustrativa">
             
-            <p class="texto-footer">Julian Chávez García</p>
-            <p class="texto-footer">Almita póngame 10</p>
+            <p class="texto_footer">Julian Chávez García</p>
+            <p class="texto_footer">Almita póngame 10</p>
         </div>
 
-        <div class="enlaces-footer">
-            <h3 class="h3">INICIO</h3>
+        <div class="contenedor_enlaces_footer">
+            <h3 class="enlace_footer_importante">INICIO</h3>
             
-            <a href="" class="enlace-footer">Tienda</a>
-            <a href="" class="enlace-footer">Sucursales</a>
-            <a href="" class="enlace-footer">Blog</a>
-            <a href="" class="enlace-footer">Contáctanos</a>
-            <a href="" class="enlace-footer">Conócenos</a>
+            <a href="" class="enlace_footer">Tienda</a>
+            <a href="" class="enlace_footer">Sucursales</a>
+            <a href="" class="enlace_footer">Blog</a>
+            <a href="" class="enlace_footer">Contáctanos</a>
+            <a href="" class="enlace_footer">Conócenos</a>
         </div>
 
-        <div class="miembros-footer">
-            <h3 class="h3">MIEMBROS</h3>
+        <div class="miembros_footer">
+            <h3 class="enlace_footer_importante">MIEMBROS</h3>
             
-            <a href="" class="enlace-footer">Mi cuenta</a>
+            <a href="" class="enlace_footer">Mi cuenta</a>
         </div>
 
-        <div class="redes-sociales">
-            <h3 class="h3">SÍGUENOS</h3>
+        <div class="contenedor_redes_sociales">
+            <h3 class="enlace_footer_importante">SÍGUENOS</h3>
             
-            <div class="iconos-redes">
-                <a href=""><img class="img-footer" src="../imagenes/footer/facebook.png" alt="Facebook"></a>
-                <a href=""><img class="img-footer" src="../imagenes/footer/twitter.png" alt="Twitter"></a>
-                <a href=""><img class="img-footer" src="../imagenes/footer/instagram.png" alt="Instagram"></a>
-                <a href=""><img class="img-footer" src="../imagenes/footer/tiktok.png" alt="TikTok"></a>
+            <div class="contenedor_iconos_redes">
+                <a href=""><img class="img_footer" src="../imagenes/footer/facebook.png" alt="Facebook"></a>
+                <a href=""><img class="img_footer" src="../imagenes/footer/twitter.png" alt="Twitter"></a>
+                <a href=""><img class="img_footer" src="../imagenes/footer/instagram.png" alt="Instagram"></a>
+                <a href=""><img class="img_footer" src="../imagenes/footer/tiktok.png" alt="TikTok"></a>
             </div>
         </div>
     </footer>
 
-    <script src="../javascript/productos-metodos/agregar-producto.js"></script>
-    <script src="../javascript/productos-metodos/editar-producto.js"></script>
-    <script src="../javascript/styles-functions/navegacion-gestion.js"></script>
+    <script src="../javascript/productos_metodos/agregar_producto.js"></script>
+    <script src="../javascript/productos_metodos/editar_producto.js"></script>
+    <script src="../javascript/styles_functions/navegacion_gestion.js"></script>
 </body>
 </html>

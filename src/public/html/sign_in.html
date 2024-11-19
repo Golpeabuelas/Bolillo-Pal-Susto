@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../imagenes/favicon.jpeg" type="image/x-icon">
-    <title>Bolillo pal susto</title>
-    
-    <link rel="stylesheet" href="../css/styles-index.css">
+    <title>Sign In</title>
+
     <link rel="stylesheet" href="../css/footer&header.css">
+    <link rel="stylesheet" href="../css/formularios.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,8 +37,26 @@
         <input type="hidden" id="id_cargada" name="id_cargada">
     </header>
 
-    <div class="contenedor_inventario" id="contenedor_inventario">
-        
+    <div class="contenedor_formulario">
+        <h2 class="subtitulo_formulario">INICIAR SESIÓN</h2>
+
+        <hr class="adorno_pequeño">
+        <hr class="adorno_grande">
+
+        <form class="formulario" id="form_log_in">
+            <label class="label_input" for="correo">Correo</label>
+            <input type="email" name="correo" id="correo">
+
+            <label class="label_input" for="password">Contraseña</label>
+            <input type="password" name="password" id="password" class="input">
+
+            <a href="" class="enlace_recuperar">Olvidé mi contraseña</a>
+
+            <input type="submit" value="INICIAR SESIÓN" class="boton" id="iniciar">
+        </form>
+
+        <a href="sign_up" class="enlace_navegacion">¿Aún no tienes cuenta? <span>¡REGISTRATE!</span></a>
+
     </div>
 
     <footer class="footer">
@@ -77,7 +95,6 @@
         </div>
     </footer>
 
-    <script src="../javascript/cargar-datos/generar_pagina.js" type="module"></script>
+    <script src="../javascript/cargar-datos/cargar_usuario.js"></script>
 </body>
 </html>
-
