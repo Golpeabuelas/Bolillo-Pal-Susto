@@ -10,7 +10,7 @@ productos.post('/agregarProducto', (req, res) => {
     const precio = req.body.precio;
     const categoria = req.body.categoria;
 
-    connection.query('insert into producto(nombre, descripcion, imagen, precio, categoria) values (?, ?, ?, ?, ?)', [nombre, descripcion, imagen, precio, categoria], (err, respuesta, fields) => {
+    connection.query('INSERT INTO producto(nombre, descripcion, imagen, precio, categoria) values (?, ?, ?, ?, ?)', [nombre, descripcion, imagen, precio, categoria], (err, respuesta, fields) => {
         if (err) {
             console.log("Error al conectar", err);
             return res.status(500).send("Error al conectar");

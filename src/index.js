@@ -28,4 +28,5 @@ app.get('/', (req, res) => {
 
 app.listen(app.get('port'), () => {
     console.log('Server listening on port', app.get('port'));
+    console.log('http://localhost:3000')
 });

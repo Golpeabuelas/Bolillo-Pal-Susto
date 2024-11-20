@@ -8,7 +8,8 @@ create table producto(
     descripcion text not null,
     imagen text not null,
     precio decimal(5,2) not null,
-    categoria varchar(255) not null
+    categoria varchar(255) not null,
+    cantidad int not null
 );
 
 create table usuario(
@@ -20,6 +21,14 @@ create table usuario(
     fecha_nac date not null,
     permisos boolean not null
 );
+
+create table carrito{
+
+}
+
+create table pedido{
+    id_pedido
+}
 
 drop table producto;
 
